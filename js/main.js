@@ -217,7 +217,7 @@ function run() {
             statement++;
             continue;
         }
-        if(g_program[statement].match(/^t$/)) {
+        if(g_program[statement].match(/^t/)) {
             let num;
             if(g_program[statement].length == 2) {
                 num = parseInt(g_program[statement].charAt(1));
@@ -232,7 +232,7 @@ function run() {
             statement++;
             continue;
         }
-        if(g_program[statement].match(/^s$/)) {
+        if(g_program[statement].match(/^s/)) {
             let num;
             if(g_program[statement].length == 2) {
                 num = parseInt(g_program[statement].charAt(1));
