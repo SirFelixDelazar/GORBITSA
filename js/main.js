@@ -99,6 +99,7 @@ function run() {
                 num = parseInt(g_program[statement].charAt(1).concat(g_program[statement].charAt(2)).concat(g_program[statement].charAt(3)));
             }
             g_register += num;
+            g_register %= 256;
             statement++;
             continue;
         }
@@ -134,6 +135,7 @@ function run() {
                 num = parseInt(g_program[statement].charAt(1).concat(g_program[statement].charAt(2)).concat(g_program[statement].charAt(3)));
             }
             g_register += g_ram[num];
+            g_register %= 256;
             statement++;
             continue;
         }
@@ -149,6 +151,7 @@ function run() {
                 num = parseInt(g_program[statement].charAt(1).concat(g_program[statement].charAt(2)).concat(g_program[statement].charAt(3)));
             }
             g_register += g_ram[g_ram[num]];
+            g_register %= 256;
             statement++;
             continue;
         }
@@ -164,6 +167,7 @@ function run() {
                 num = parseInt(g_program[statement].charAt(1).concat(g_program[statement].charAt(2)).concat(g_program[statement].charAt(3)));
             }
             g_ram[g_ram[num]] += g_register;
+            g_ram[g_ram[num]] %= 256;
             statement++;
             continue;
         }
@@ -214,6 +218,7 @@ function run() {
                 num = parseInt(g_program[statement].charAt(1).concat(g_program[statement].charAt(2)).concat(g_program[statement].charAt(3)));
             }
             g_ram[num] += g_register;
+            g_ram[num] %= 256;
             statement++;
             continue;
         }
@@ -259,6 +264,7 @@ function run() {
                 num = parseInt(g_program[statement].charAt(1).concat(g_program[statement].charAt(2)).concat(g_program[statement].charAt(3)));
             }
             g_register += g_ram[g_ram[num]];
+            g_register %= 256;
             statement++;
             continue;
         }
