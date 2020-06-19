@@ -44,14 +44,6 @@ textarea {
     color: #2e1;
 }
 
-#out {
-    padding-left: 1em;
-    height: 6rem;
-    overflow: hidden;
-    background-color: #222;
-    color: #3a2;
-}
-
 .compile-button {
     padding: 1em;
     background-color: #333;
