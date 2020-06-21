@@ -151,7 +151,7 @@ function checkSyntax(program) {
     program.forEach(element => {
         if (!isValidStatement(element)) {
             console.error(element, '<< invalid syntax')
-            alert(element, '<< invalid syntax')
+            alert(element + '<< invalid syntax')
             canCompile = false
         }
     })
